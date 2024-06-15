@@ -23,8 +23,9 @@ import {
   DiscordIcon,
   HeartFilledIcon,
   SearchIcon,
-  Logo,
+
 } from "@/components/icons";
+import Image from "next/image";
 
 export const Navbar = () => {
   const searchInput = (
@@ -40,7 +41,7 @@ export const Navbar = () => {
         </Kbd>
       }
       labelPlacement="outside"
-      placeholder="Search..."
+      placeholder="Ara..."
       startContent={
         <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
       }
@@ -53,8 +54,8 @@ export const Navbar = () => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
-            <p className="font-bold text-inherit">ACME</p>
+            <Image alt="logo" height={50} width={50} src={'/logo.png'} />
+            <p className="font-bold text-inherit">DersX</p>
           </NextLink>
         </NavbarBrand>
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
