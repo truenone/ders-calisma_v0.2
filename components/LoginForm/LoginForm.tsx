@@ -23,8 +23,8 @@ export default function LoginForm() {
 
 
     return (
-        <div className="flex flex-row items-center justify-center">
-            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 items-center md:w-1/2 w-full">
+        <div className="flex flex-row items-center justify-center h-full w-full">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4 items-center md:w-1/2 w-full h-full">
                 <h3 className="font-bold text-2xl">Giriş Ekranı</h3>
                 <div className="flex flex-col gap-2">
                     <div className="flex flex-row gap-2">
@@ -47,7 +47,9 @@ export default function LoginForm() {
                 <div className="flex flex-row object-right w-full justify-end">
                     <Button type="submit" className="">Giriş Yap</Button>
                 </div>
+
             </form>
+
         </div>
     )
 }
